@@ -1,0 +1,255 @@
+/*Global Styles*/
+
+@font-face {
+  font-family: 'Venera';
+  src: url('../public/Venera700/Venera_Personal_License/Venera-700.otf') format('truetype');
+  font-weight: 700; 
+  font-style: normal;
+}
+
+body {
+  font-family: 'Venera', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: smaller;
+}
+
+* {
+  font-family: 'Venera', sans-serif;
+  box-sizing: inherit;
+}
+/*  HOME COMPONENT */
+
+.home-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.flight-search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search-button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+}
+
+
+/*  SEARCH COMPONENT */
+.flight-info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-message,
+.error-message,
+.no-flights-message {
+  text-align: center;
+  color: #777;
+}
+
+.flight-title {
+  text-align: center;
+  color: #333;
+}
+
+.destination-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.status-info {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.itineraries-title {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+.itinerary-card {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.legs-title {
+  margin-top: 15px;
+  color: #555;
+}
+
+.leg-info {
+  margin-top: 10px;
+}
+
+.leg-info p {
+  margin: 5px 0;
+}
+.pagination-controls{
+   align-items: center;
+   text-align: center;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .flight-info-container {
+    padding: 15px;
+  }
+
+  .flight-title {
+    font-size: 1.5rem;
+  }
+
+  .itinerary-card {
+    padding: 10px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .legs-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* NearBy Component */
+.nearby-airports-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.loading-message {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 18px;
+  color: red;
+}
+
+.airport-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.airport-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.airport-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.airport-card p {
+  margin: 8px 0;
+  color: #555;
+}
